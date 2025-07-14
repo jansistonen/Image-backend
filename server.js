@@ -57,7 +57,7 @@ app.get("/image/:id", (req, res) => {
   
     res.json({
       id,
-      url: `http://localhost:4000/uploads/${found}`,
+      url: `https://image-backend.onrender.com/uploads/${found}`,
       votes,
       percentage,
     });
