@@ -57,7 +57,7 @@ app.get("/image/:id", (req, res) => {
   
     res.json({
       id,
-      url: `https://image-backend-k3uq.onrender.com/uploads/${found}`,
+      url: `https://image-backend-giso.onrender.com/uploads/${found}`, //https://image-backend-k3uq.onrender.com
       votes,
       percentage,
     });
@@ -86,7 +86,7 @@ app.get("/image/:id", (req, res) => {
   
     res.json({
   id,
-  url: `https://image-backend-k3uq.onrender.com/uploads/${randomFile}`, 
+  url: `https://image-backend-giso.onrender.com/uploads/${randomFile}`, 
 });
   });
   
