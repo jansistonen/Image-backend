@@ -85,8 +85,8 @@ app.get("/image/:id", (req, res) => {
     const id = path.basename(randomFile, path.extname(randomFile));
   
     res.json({
-      id,
-      url: `http://localhost:4000/uploads/${randomFile}`,
-    });
+  id,
+  url: `https://image-backend-k3uq.onrender.com/uploads/${randomFile}`, 
+});
   });
   
