@@ -89,4 +89,20 @@ app.get("/image/:id", (req, res) => {
   url: `https://image-backend-giso.onrender.com/uploads/${randomFile}`, 
 });
   });
+
+app.get("/vote-result/:id", (req, res) => {
+  const id = req.params.id;
+  const votes = voteData[id];
+
+  if (!votes) {
+    return res.status(404).json({ error: "No votes found for image" });
+  }
+
+  const totalVotes = votes.left + votes.right;
+  res.json({
+    positiveVotes: votes.right,
+    totalVotes,
+  });
+});
+
   
